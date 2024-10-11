@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="../Checkout/Checkout.css">
+    
+</head>
+<body>
+    
+    <div class="navbar">
+        <div class="logo"><img src="../pic/Logo.png" alt="" width="80px"></div>
+        <a href="../Main/Home.html"><img src="../pic/HOME.png" alt="" width="80px" height="40px"></a>
+        <a href="../Category/Category.html"><img src="../pic/CATEGORY.png" alt=""width="80px" height="40px"></a>
+        <a href="../About/About.html"><img src="../pic/About.png" alt=""width="80px" height="40px"></a>
+        <a href="../contact/contact.html"><img src="../pic/Contact.png" alt=""width="80px" height="40px"></a>
+        <a href="../login/log-in.html"><img src="../pic/Login.png" alt=""width="80px" height="40px"></a>
+        <a href="../Checkout/Checkout.html"><img src="../pic/Cart.png" alt=""width="80px" height="40px"></a>
+        
+        
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="categorybutton">
+        <a href="../Cate/Comset.html"><img src="../pic/2.png" alt="" height="40px"></a> 
+        <a href="../Cate/Cpu.html"><img src="../pic/1.png" alt="" height="40px"></a>
+        <a href="../Cate/GPU.html"><img src="../pic/3.png" alt="" height="40px"></a>
+        <a href="../Cate/PSU.html"><img src="../pic/4.png" alt="" height="40px"></a>
+        <a href="../Cate/Ram.html"><img src="../pic/5.png" alt="" height="40px"></a>
+    </div>
+
+    <div class="container">
+        <h2>Cart</h2>
+        <div class="payment-form">
+            <!-- ข้อมูลการชำระเงิน -->
+            <label for="name-card">Name on Card</label>
+            <input type="text" id="name-card" placeholder="Enter Name on Card">  
+
+            <label for="credit-card">Credit Card Number</label>
+            <input type="text" id="credit-card" placeholder="Enter Credit Card Number">
+            <div class="payment-icons">
+                <img src="../pic/mc_sym_debit_pos_46_1x.png" alt="MasterCard">
+                <img src="../pic/visa.png" alt="Visa">
+                <img src="../pic/paypal.png" alt="PayPal">
+                <img src="../pic/apple.png" alt="Apple Pay">
+            </div>
+
+            <label for="exp-month">Exp Month</label>
+            <input type="text" id="exp-month" placeholder="MM/YY">
+
+            <label for="state">State</label>
+            <input type="text" id="state" placeholder="Enter State">
+
+            <label for="zip">Zip</label>
+            <input type="text" id="zip" placeholder="Enter Zip Code">
+
+            <label for="cvv">CVV</label>
+            <input type="text" id="cvv" placeholder="Enter CVV">
+        </div>
+
+        <div class="cart">
+            <h3>Your Cart</h3>
+            <!-- ตารางแสดงรายการสินค้า -->
+            <div class="cart-table">
+                <div class="cart-item">
+                    <span>Item</span>
+                    <span>Price</span>
+                </div>
+                <!-- รายการสินค้าจะแสดงที่นี่ -->
+                <div id="cart-items"></div>
+            </div>
+            <!-- แสดงราคารวม -->
+            <div class="total">
+                <span>Total:</span>
+                <span id="total-price">0 Baht</span> <!-- ค่า default จะถูกแทนที่ด้วย JS -->
+            </div>
+        </div>
+
+        <button id="checkout-btn" class="checkout-btn">Continue to Checkout</button>
+        <button id="clear-cart-btn" class="clear-cart">Clear Cart</button>
+        <div id="payment-popup" class="popup">
+            <div class="popup-content">
+                <span class="close-btn">&times;</span>
+                <h2>การชำระเงินสำเร็จ!!</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="con">
+            <a href="https://www.fitm.kmutnb.ac.th/"><img src="../pic/W.png" alt="" ></a>
+            <a href="https://www.youtube.com/@FITMChannel/videos"><img src="../pic/Y.png" alt=""></a>
+            <a href="https://www.facebook.com/FITM.KMUTNB/?locale=th_TH"><img src="../pic/F.png" alt=""></a>
+            <div class="search-container">
+                <input type="text" id="searchInput" class="search-box" placeholder="ค้นหาที่นี่...">
+                <button class="search-button" onclick="performSearch()">ค้นหา</button>
+            </div>
+            <div id="result" class="search-result"></div>
+        </div>   
+        <h1>Thank You For Support!!</h1>
+        <form>
+            <input type="email" class="email-input" placeholder="Enter Your Email">
+            <button type="submit" class="submit-btn">SIGN UP</button>
+        </form>
+
+        <div class="divider"></div>
+        <div class="footer-text">
+            © 2024 Kmutnb วิทยาเขตปราจีนบุรี คณะเทคโนโลยีและการจัดการอุตสาหกรรม<br>
+            Faculty of Industrial Technology and Management
+        </div>
+    </div>
+    
+    <button onclick="scrollToTop()" id="scrollBtn">กลับไปด้านบน</button>
+
+    <!-- เชื่อมต่อ checkout.js -->
+    <script src="../Checkout/checkout.js"></script>
+</body>
+</html>

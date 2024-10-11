@@ -1,0 +1,498 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #2b2b2b;
+    color: #ffffff;
+}
+.header {
+    width: auto; /* กำหนดความกว้างของรูปภาพเป็น 300 พิกเซล */
+    height: auto; /* ให้ความสูงปรับตามสัดส่วน */
+    
+    
+    
+    
+    
+    
+    
+}
+.navbar {
+    display: flex;
+    background-color: #464343;
+    justify-content: flex-end;
+    flex-wrap: wrap; 
+    padding: 10px 60px; /* เพิ่ม padding ให้กับ navbar */
+    border-bottom: 1px solid #fafafa; /* ขอบด้านล่างของ navbar */
+    gap: 20px;
+    
+    
+    
+}
+.navbar a {
+    color: white;
+    background-color: #464343;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px 15px; /* เพิ่ม padding สำหรับลิงก์ */
+    display: block; /* ทำให้ลิงก์ขยายเต็มขนาดของพาเรนต์ */
+    
+}
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+
+
+
+
+.categorybutton {
+    display: flex;
+    background-color: #464343;
+    flex-wrap: wrap; 
+    padding: 30px 20px; /* เพิ่ม padding ให้กับ navbar */
+    border-bottom: 1px solid #ffffff; /* ขอบด้านล่างของ navbar */
+    justify-content: center;
+    border-radius: 20px;
+    margin: 20px;
+    padding: 10px 30px;
+    
+}
+.categorybutton a {
+    color: white;
+    background-color: #464343;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px 20px; /* เพิ่ม padding สำหรับลิงก์ */
+    display: block; /* ทำให้ลิงก์ขยายเต็มขนาดของพาเรนต์ */
+    margin: 20px;
+    
+    
+    
+}
+.categorybutton a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+
+
+.Recommand {
+    position: relative;
+    width: 200px;
+    height: 400px;
+    max-width: 200px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* สร้าง 4 คอลัมน์ที่มีความกว้างเท่ากัน */
+    grid-template-rows: repeat(4, 1fr); /* สร้าง 4 แถวที่มีความสูงเท่ากัน */
+    gap: 10px; /* ช่องว่างระหว่างรูป */
+}
+
+
+
+
+
+
+
+
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+.side {
+    flex: 30%;
+    background-color: #ffffff;
+    padding: 20px;
+}
+.main {
+    margin: 0;
+    flex: 70%;
+    background-color: #ffffff;
+    padding: 20px;
+}
+
+
+.footer {
+    margin-top: 300px; /* Adjust this value to push the footer down */
+    padding: 20px;
+    background-color: #333333;
+    color: white;
+    text-align: center;
+    
+}
+
+.slider {
+    position: relative;
+    width: 100%; /* กำหนดความกว้าง 100% ตามขนาดหน้าจอ */
+    max-width: 800px; /* จำกัดขนาดสูงสุด */
+    height: 300px; /* กำหนดความสูงของสไลเดอร์ */
+    overflow: hidden; /* ซ่อนส่วนเกิน */
+    margin: auto;
+    border-radius: 50px;
+    gap: 10px;
+
+}
+
+.slides {
+    display: flex;
+    width: calc(200%); 
+    animation: slideAnimation 30s linear infinite; /* เลื่อนต่อเนื่อง 16 วินาที */
+    border-radius: 50px;
+}
+
+.slides img {
+    width: 100%; /* ให้รูปเต็มความกว้างของแต่ละคอลัมน์ */
+    height: 100%; /* ให้รูปเต็มความสูง */
+    object-fit: cover; /* จัดการภาพให้อยู่ในขนาดที่กำหนด */
+    margin-right: 10px; /* ระยะห่างระหว่างรูปภาพ */
+    border-radius: 10px;
+}
+
+
+
+
+
+@keyframes slideAnimation {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); } /* เลื่อนออกไป 100% ของความกว้างทั้งหมด */
+}
+
+
+
+
+
+@media screen and (max-width: 700px) {
+  .grid {
+      flex-direction: column; /* เปลี่ยนให้แสดงในแนวตั้งเมื่อหน้าจอเล็กลง */
+      align-items: center; /* จัดให้ผลิตภัณฑ์อยู่ตรงกลาง */
+  }
+  
+  .product {
+      width: 100%; /* ทำให้ผลิตภัณฑ์เต็มความกว้าง */
+      margin: 10px 0; /* เพิ่มระยะห่างระหว่างผลิตภัณฑ์ในแนวตั้ง */
+  }
+  .logo {
+    display: none; /* ซ่อนโลโก้ */
+  }
+  .navbar {
+    flex-direction: column; /* ทำให้ navbar แสดงในแนวตั้ง */
+    padding: 10px;
+  }
+  .categorybutton {
+    flex-direction: column; /* ทำให้ปุ่มแสดงในแนวตั้ง */
+    padding: 10px;
+  }
+  .Recommand {
+    grid-template-columns: 1fr; /* ปรับเป็น 1 คอลัมน์เมื่อหน้าจอเล็กที่สุด */
+  }
+  .title {
+    font-size: 24px; /* ลดขนาดฟอนต์สำหรับหน้าจอเล็ก */
+  }
+  .product img {
+    max-width: 100%; /* ปรับให้ภาพเต็มความกว้างของบรรจุภัณฑ์ */
+  }
+  .footer {
+    margin-top: 100px; /* ลดพื้นที่ด้านบนของ footer */
+}
+  .map-container img {
+    width: 50%; /* Reduce map size */
+    margin: 0 auto;
+}
+
+.login-container {
+    width: 90%;
+}
+}
+
+
+.container {
+    width: 100%;
+    padding: 20px;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #007BFF;
+    margin-bottom: 20px;
+    
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px; 
+}
+
+.product {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    flex-basis: calc(33.33% - 20px);
+}
+
+.product:hover {
+    transform: scale(1.05);
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    border: 2px solid #a8a8a8;
+    border-radius: 20px;
+}
+
+.product h3 {
+    font-size: 16px;
+    color: #333;
+    margin: 10px 0;
+}
+
+.price {
+    font-size: 24px;
+    font-weight: bold;
+    color: #007BFF;
+}
+
+.divider {
+    width: 100%; 
+    height: 5px; 
+    background-color: rgb(82, 185, 178); 
+    margin: 10px 0; 
+}
+
+.logo {
+    display: flex;
+    align-items: left;
+    margin-right: auto; /* ทำให้โลโก้อยู่ทางซ้ายสุด */
+}
+
+.con {
+    display: flex;
+    
+    justify-content: flex-end;
+    flex-wrap: wrap; 
+    padding: 10px 20px; /* เพิ่ม padding ให้กับ navbar */
+    
+    
+    
+    
+    
+}
+
+/* Absolute Center CSS Spinner */
+#scrollBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #555;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  #scrollBtn:hover {
+    background-color: #333;
+  }
+
+  #character {
+    width: 100px;
+    height: 100px;
+    background-image: url('https://media.tenor.com/Tjq6A2eFOnMAAAAe/gojo-satoru-gojo.png'); /* ใส่ URL ของตัวการ์ตูน */
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s ease;
+  }
+
+  /* Animation สำหรับการเคลื่อนไหว */
+  @keyframes float {
+    0% {
+      transform: translate(-50%, -50%) translateY(0);
+    }
+    50% {
+      transform: translate(-50%, -50%) translateY(-10px);
+    }
+    100% {
+      transform: translate(-50%, -50%) translateY(0);
+    }
+  }
+
+  
+
+  .fade-in {
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+  }
+
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+
+  .content {
+    padding: 20px;
+    font-size: 24px;
+    margin: 20px;
+  }
+
+  .search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .search-box {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+  }
+
+  .search-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .search-button:hover {
+    background-color: #45a049;
+  }
+
+  .search-result {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333;
+  }
+
+
+
+  @keyframes move {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(100vw, 100vh);
+    }
+  }
+
+
+
+  @keyframes fly {
+    0% {
+      transform: translate(-100px, 0) scale(1);
+    }
+    50% {
+      transform: translate(calc(100vw + 100px), 100px) scale(1.2);
+    }
+    100% {
+      transform: translate(-100px, 200px) scale(1);
+    }
+  }
+
+
+/* Login Container */
+.login-container {
+    max-width: 1250px; /* กำหนดความกว้างของคอนเทนเนอร์ */
+    margin: 50px auto;
+    padding: 30px; /* เพิ่ม padding */
+    background-color: rgba(74, 74, 74, 0.8); /* เพิ่มความโปร่งใสให้พื้นหลังสี */
+    border-radius: 10px;
+    text-align: center;
+     /* เปลี่ยนเป็น path ของภาพพื้นหลัง */
+    background-size: cover; /* ทำให้ภาพขยายเต็มพื้นที่ */
+    background-position: center; /* จัดตำแหน่งภาพให้อยู่กลาง */
+}
+
+.login-header {
+    margin-bottom: 20px; /* เพิ่มระยะห่างด้านล่าง */
+    background-color: rgba(66, 200, 245, 0.8); /* เปลี่ยนพื้นหลังเฉพาะหัวข้อ login */
+    padding: 10px; /* เพิ่ม padding ให้หัวข้อ */
+    border-radius: 8px; /* การโค้งมุม */
+    background-image: url('../pic/tech.jpg');
+}
+
+.login-title {
+    font-size: 2.5rem; /* ขนาดตัวอักษร */
+    color: #fff; /* สีตัวอักษร */
+}
+
+.input-container {
+    margin-bottom: 20px; /* ระยะห่างด้านล่าง */
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group {
+    margin-bottom: 20px; /* ระยะห่างระหว่างกลุ่ม input */
+}
+
+.input-group label {
+    margin-bottom: 8px; /* ระยะห่างระหว่าง label กับ input */
+    font-weight: bold;
+    text-align: left;
+    color: #ffffff;
+}
+
+.input-group input {
+    padding: 15px; /* เพิ่มความหนาของ padding เพื่อให้ช่องใหญ่ขึ้น */
+    width: 100%; /* ให้ช่องยาวเต็มคอนเทนเนอร์ */
+    border-radius: 8px; /* การโค้งของมุม */
+    border: none;
+    font-size: 1.2rem; /* ขนาดฟอนต์ */
+    background-color: rgba(255, 255, 255, 0.8); /* เพิ่มความโปร่งใสให้พื้นหลังของ input */
+    color: #000000; /* สีตัวอักษร */
+    height: 50px; /* ปรับความสูงของ input */
+}
+
+.btn-signup {
+    padding: 20px; /* ขนาดปุ่ม */
+    background-color: #42c8f5;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.5rem; /* ขนาดฟอนต์ของปุ่ม */
+    font-weight: bold;
+    color: #000;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+.btn-back {
+    padding: 15px;
+    background-color: #000;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+}

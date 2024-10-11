@@ -1,0 +1,157 @@
+/* Reset some default styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #2b2b2b;
+    color: #ffffff;
+}
+
+/* Header styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #000;
+}
+
+
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    background-color: #333;
+    padding: 50px;
+    background-image: url('hero-background.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    color: #42c8f5;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+/* Contact Section */
+.contact {
+    background-color: #4a4a4a;
+    padding: 20px;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 1.8rem;
+    color: #42c8f5;
+    margin-bottom: 10px;
+}
+
+.contact-info {
+    background-color: #666;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.contact-info p {
+    margin: 10px 0;
+}
+
+/* Map Section */
+.map {
+    background-color: #4a4a4a;
+    padding: 20px;
+    text-align: center;
+}
+
+.map h2 {
+    font-size: 1.8rem;
+    color: #42c8f5;
+    margin-bottom: 10px;
+}
+
+.map-container {
+    background-color: #666;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.map-container img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* Email Signup Section */
+.email-signup {
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
+}
+
+.email-signup input {
+    padding: 10px;
+    width: 60%;
+    max-width: 300px;
+    border-radius: 5px;
+    border: none;
+    margin-right: 10px;
+}
+
+.email-signup button {
+    padding: 10px 20px;
+    background-color: #42c8f5;
+    border: none;
+    color: #000;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Footer Section */
+footer {
+    background-color: #000;
+    color: #999;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.8rem;
+}
+
+footer p {
+    line-height: 1.5;
+}
+
+@media (max-width: 700px) {
+    .map-container img {
+        width: 80%; /* Reduce map size */
+        margin: 0 auto;
+    }
+
+    .map-container iframe {
+        width: 100%; /* Keep iframe full width */
+        height: 300px; /* Reduce height when responsive */
+    }
+}
+
